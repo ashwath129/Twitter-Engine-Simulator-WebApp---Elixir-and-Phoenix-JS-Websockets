@@ -1,0 +1,141 @@
+<!--NAME: ASHWATH VENKATARAMAN UFID: 5198-9461
+NAME: SHASEDHARAN SEKARAN  UFID: 8381-0114 -->
+<style>
+.input-username-div{
+  height: 45px;
+  width: 600px;
+  padding-bottom: 70px;
+}
+.button-inbet-space{
+  margin-right: 20px;
+  font-size: 16px;
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+.button-inbet-space:hover{
+  margin-right: 20px;
+  font-size: 16px;
+  background-color: #ffff;
+  border-color: #1da1f2;
+  color: #1da1f2;
+}
+.button-inbet-space:active{
+  background-color: #1da1f2 !important;
+  border-color: #1da1f2 !important;
+  color: #ffff !important;
+}
+.button-inbet-space:focus{
+  background-color: #1da1f2 !important;
+  border-color: #1da1f2 !important;
+  color: #ffff !important;
+}
+.tweeter-header{
+  height: 20px;
+  width: 100%;
+  background-color: #1da1f2;
+  padding: 50px;
+}
+.tweeter-header-content{
+  font-size: 72px;
+  margin-top: -56px;
+  margin-left: -20px;
+  font-family: Courier New;
+  font-weight: 800;
+  color: #ffff;
+}
+.tweeter-display{
+  height: 70vh;
+  width: 90vh;
+  border-color: #1da1f2;
+  border-style: double;
+  overflow: scroll;
+}
+.tweeter-phoenix-logo{
+  width: 100px;
+  height: 82px;
+  margin-left: 290px;
+  margin-top: -114px;
+  position: absolute;
+}
+.tweeter-display li{
+  padding: 10px;
+  font-family: Courier New;
+  font-size: 16px;
+  font-weight: 200;
+}
+.clear-screen-button{
+  font-size: 10px;
+  background-color: #ffff;
+  border-color: #f50000;
+  color: #f50000;
+  border-radius: 1px;
+  float: right;
+}
+.clear-screen-button:hover{
+  background-color: #f50000;
+  border-color: #f50000;
+  color: #ffff;
+}
+.clear-screen-button:focus{
+  background-color: #ffff;
+  border-color: #f50000;
+  color: #f50000;
+}
+.retweet-button-icon{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  top: 9px;
+}
+.tweet-msg-pad{
+  padding-left: 10px;
+}
+.tweeter-feed-title span{
+  font-size: 26px;
+  font-family: Courier New;
+  font-weight: 500;
+}
+.additonal-pad-marg{
+  margin-top: 10px;
+}
+.options-button-div{
+  margin-top: 10px;
+}
+.options-button-div button{
+  width: 100%;
+}
+.content-word-bold{
+  font-weight: 600;
+}
+</style>
+<div class="tweeter-header">
+  <h4 class="tweeter-header-content">TWEETER</h4><img src="<%= Routes.static_path(@conn, "/images/phoenixicon.png") %>" class="tweeter-phoenix-logo"/>
+</div>
+<div id="mainPageDiv" class="row" style="margin-top: 25px;">
+  <div class="col-md-6" style="padding-left:30px;">
+    <div class="tweeter-feed-title"><span>Explore Tweeter</span></div>
+    <div class="input-username-div additonal-pad-marg">
+      <input id="username" type="text" placeholder="Enter the Username to Register" class="form-control" style="font-size:20px;width: inherit;height: inherit;"></input>
+    </div>
+    <div class="input-username-div">
+      <input id="sendtweet" type="text" placeholder="Tweet what's on your mind..." class="form-control" style="font-size:20px;width: inherit;height: inherit;"></input>
+    </div>
+    <div class="input-username-div">
+      <input id="subscribe" type="text" placeholder="Enter the Username to Subscribe"  class="form-control" style="font-size:20px;width: inherit;height: inherit;"></input>
+    </div>
+    <div class="input-username-div">
+      <input id="search_hashtag" type="text" placeholder="Search Tweeter for #HashTags"  class="form-control" style="font-size:20px;width: inherit;height: inherit;"></input>
+      <div class="options-button-div">
+        <button id="search_user_tweets" type="button" class="btn btn-info button-inbet-space">My News Feed</button>
+        <button id="get_tweets" type="button" class="btn btn-info button-inbet-space">My Tweets</button>
+        <button id="get_subscribers" type="button" class="btn btn-info button-inbet-space">My Followers</button>
+        <button id="search_mentions" type="button"  class="btn btn-info button-inbet-space">My Mentions</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" style="padding-left:40px;">
+    <div class="tweeter-feed-title"><span>Tweeter Feed</span><button id="clear_screen" type="button"  class="btn btn-info clear-screen-button">Clear Feed</button></div>
+    <div id="messages" class="tweeter-display"></div>
+  </div>
+</div>
