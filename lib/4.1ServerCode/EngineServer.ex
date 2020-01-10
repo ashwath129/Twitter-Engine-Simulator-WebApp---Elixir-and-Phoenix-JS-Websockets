@@ -1,8 +1,8 @@
 defmodule TwitterElixir.EngineServer do
   use GenServer
 
-  # NAME: ASHWATH VENKATARAMAN UFID: 5198-9461
-  # NAME: SHASEDHARAN SEKARAN  UFID: 8381-0114
+  # NAME: ASHWATH VENKATARAMAN
+  # NAME: SHASEDHARAN SEKARAN
 
   def start_link() do
     GenServer.start_link(__MODULE__, :ok)
